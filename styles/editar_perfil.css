@@ -1,0 +1,382 @@
+/* Estilos para Mi Perfil */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1f2937;
+  color: #e5e7eb;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  background-color: #374151;
+  border: 1px solid #4b5563;
+  border-radius: 8px;
+  padding: 20px 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.btn-volver {
+    background-color: #4b5563;
+    border: 1px solid #6b7280;
+    color: white;
+    padding: 6px 42px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.btn-volver:hover {
+    background-color: #6b7280;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+/* Cards */
+.card {
+  background-color: #374151;
+  border: 1px solid #4b5563;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #4b5563;
+  padding-bottom: 10px;
+}
+
+/* Información del Usuario */
+.user-info {
+  background-color: #1f2937;
+  border: 1px solid #4b5563;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #4b5563;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  color: #9ca3af;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.info-value {
+  color: #e5e7eb;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* Formulario */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #e5e7eb;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #4b5563;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #1f2937;
+  color: #e5e7eb;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-group input::placeholder {
+  color: #6b7280;
+}
+
+/* Botones */
+.btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Alertas */
+.alert {
+  padding: 15px 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 14px;
+  border: 1px solid transparent;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.alert-success {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border-color: #10b981;
+}
+
+.alert-error {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  border-color: #ef4444;
+}
+
+/* Badges de Rol */
+.badge {
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.badge-jefatura {
+  background-color: #fbbf24;
+  color: #92400e;
+}
+
+.badge-operador {
+  background-color: #10b981;
+  color: white;
+}
+
+.badge-quimico {
+  background-color: #0ea5e9;
+  color: white;
+}
+
+.badge-mantenimiento {
+  background-color: #6b7280;
+  color: white;
+}
+
+.badge-administrador {
+  background-color: #ef4444;
+  color: white;
+}
+
+/* Consejos de Contraseña */
+.password-tips {
+  background-color: rgba(59, 130, 246, 0.1);
+  border: 1px solid #3b82f6;
+  border-radius: 6px;
+  padding: 15px 20px;
+  margin-top: 25px;
+}
+
+.password-tips h3 {
+  color: #60a5fa;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.password-tips ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.password-tips li {
+  color: #bfdbfe;
+  font-size: 13px;
+  padding: 5px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.password-tips li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #3b82f6;
+  font-weight: bold;
+}
+
+/* Scrollbar personalizada */
+.card::-webkit-scrollbar {
+  width: 6px;
+}
+
+.card::-webkit-scrollbar-track {
+  background: #374151;
+}
+
+.card::-webkit-scrollbar-thumb {
+  background: #6b7280;
+  border-radius: 3px;
+}
+
+.card::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Estados de inputs */
+.form-group input:invalid:not(:placeholder-shown) {
+  border-color: #ef4444;
+}
+
+.form-group input:valid:not(:placeholder-shown) {
+  border-color: #10b981;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .header h1 {
+    font-size: 1.5em;
+  }
+
+  .btn-volver {
+    width: 100%;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card h2 {
+    font-size: 1.3em;
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.3em;
+  }
+
+  .form-group input {
+    font-size: 14px;
+  }
+
+  .badge {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+
+  .password-tips {
+    padding: 12px 15px;
+  }
+
+  .password-tips li {
+    font-size: 12px;
+  }
+}
